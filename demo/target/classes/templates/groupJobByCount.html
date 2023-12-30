@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Job Grouped by Count</title>
+</head>
+<body>
+<h1>Job Grouped by Count</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Job</th>
+        <th>Number of People</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="job : ${jobs}">
+        <td th:text="${job.name}"></td>
+        <td th:text="${job.count}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

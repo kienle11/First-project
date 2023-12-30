@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>People Grouped by City</title>
+</head>
+<body>
+<h1>People Grouped by City</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>City</th>
+        <th>People</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="city : ${cities}">
+        <td th:text="${city.name}"></td>
+        <td>
+            <ul>
+                <li th:each="person : ${city.people}" th:text="${person.name}"></li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

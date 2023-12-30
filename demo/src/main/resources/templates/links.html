@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Links Page</title>
+</head>
+<body>
+<h1>Choose an action:</h1>
+<ul>
+  <li><a th:href="@{/groupPeopleByCity}">Group People By City</a></li>
+  <li><a th:href="@{/groupJobByCount}">Group Jobs By Count</a></li>
+  <li><a th:href="@{/aboveAverageSalary}">People Above Average Salary</a></li>
+  <li><a th:href="@{/longestName}">Longest Name</a></li>
+</ul>
+</body>
+</html>
